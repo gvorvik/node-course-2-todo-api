@@ -12,13 +12,13 @@ const todos = [{
 }];
 
 //Testing lifecycle method running before each test case
-// beforeEach((done) => {
-//     Todo.remove({}).then(() => {
-//         return Todo.insertMany(todos);
-//     }).then(() => {
-//         done();
-//     });
-// });
+beforeEach((done) => {
+    Todo.remove({}).then(() => {
+        return Todo.insertMany(todos);
+    }).then(() => {
+        done();
+    });
+});
 
 //describe block to organize it statements during test
 describe('POST /todos', () => {
